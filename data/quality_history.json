@@ -1,0 +1,47 @@
+[
+  {
+    "timestamp": "2026-10-20 05:54:48",
+    "composite": 85.0,
+    "test_coverage": 90.0,
+    "clarity": 80.0,
+    "stability": 95.0,
+    "design_coverage": 75.0,
+    "project_name": "TestProj"
+  },
+  {
+    "timestamp": "2026-10-20 05:55:11",
+    "composite": 85.0,
+    "test_coverage": 90.0,
+    "clarity": 80.0,
+    "stability": 95.0,
+    "design_coverage": 75.0,
+    "project_name": "TestProj"
+  },
+  {
+    "timestamp": "2026-10-20 06:38:24",
+    "composite": 85.0,
+    "test_coverage": 90.0,
+    "clarity": 80.0,
+    "stability": 95.0,
+    "design_coverage": 75.0,
+    "project_name": "TestProj"
+  },
+  {
+    "timestamp": "2026-10-20 06:40:39",
+    "composite": 85.0,
+    "test_coverage": 90.0,
+    "clarity": 80.0,
+    "stability": 95.0,
+    "design_coverage": 75.0,
+    "project_name": "TestProj"
+  },
+  {
+    "timestamp": "2026-10-20 06:42:37",
+    "composite": 77.8,
+    "test_coverage": 60.0,
+    "clarity": 80.8,
+    "stability": 97.9,
+    "design_coverage": 100.0,
+    "project_name": "FoodExpress - Online Food Delivery Platform"
+  }
+]

@@ -1,0 +1,476 @@
+{
+  "name": "FoodExpress - Online Food Delivery Platform",
+  "version": "1.2.0",
+  "description": "Enterprise food ordering, dispatch and real-time tracking platform for university Software Engineering coursework.",
+  "requirements": [
+    {
+      "id": "R1",
+      "text": "The customer shall be able to browse restaurant menus and filter food items by dietary preference (vegan, gluten-free, halal).",
+      "type": "Functional",
+      "priority": "High",
+      "impact": 4,
+      "complexity": 3,
+      "version": 1,
+      "change_count": 0,
+      "status": "Approved",
+      "history": [
+        {
+          "version": 1,
+          "text": "The customer shall be able to browse restaurant menus and filter food items by dietary preference (vegan, gluten-free, halal).",
+          "timestamp": "2026-10-01T09:00:00"
+        }
+      ]
+    },
+    {
+      "id": "R2",
+      "text": "The system shall process customer credit card transactions via Stripe payment gateway within 3 seconds and generate a digital receipt.",
+      "type": "Functional",
+      "priority": "High",
+      "impact": 5,
+      "complexity": 4,
+      "version": 2,
+      "change_count": 1,
+      "status": "Approved",
+      "history": [
+        {
+          "version": 1,
+          "text": "The system shall process credit card payments quickly.",
+          "timestamp": "2026-09-15T10:00:00"
+        },
+        {
+          "version": 2,
+          "text": "The system shall process customer credit card transactions via Stripe payment gateway within 3 seconds and generate a digital receipt.",
+          "timestamp": "2026-09-28T14:30:00"
+        }
+      ]
+    },
+    {
+      "id": "R3",
+      "text": "The UI must be user-friendly.",
+      "type": "Functional",
+      "priority": "Medium",
+      "impact": 3,
+      "complexity": 2,
+      "version": 1,
+      "change_count": 0,
+      "status": "Draft",
+      "history": [
+        {
+          "version": 1,
+          "text": "The UI must be user-friendly.",
+          "timestamp": "2026-10-02T11:00:00"
+        }
+      ]
+    },
+    {
+      "id": "R4",
+      "text": "The app should be fast.",
+      "type": "Functional",
+      "priority": "High",
+      "impact": 4,
+      "complexity": 3,
+      "version": 1,
+      "change_count": 0,
+      "status": "Draft",
+      "history": [
+        {
+          "version": 1,
+          "text": "The app should be fast.",
+          "timestamp": "2026-10-02T11:15:00"
+        }
+      ]
+    },
+    {
+      "id": "R5",
+      "text": "The customer shall track the assigned delivery courier's real-time GPS location on an interactive map updated every 5 seconds.",
+      "type": "Functional",
+      "priority": "High",
+      "impact": 4,
+      "complexity": 4,
+      "version": 1,
+      "change_count": 0,
+      "status": "Approved",
+      "history": [
+        {
+          "version": 1,
+          "text": "The customer shall track the assigned delivery courier's real-time GPS location on an interactive map updated every 5 seconds.",
+          "timestamp": "2026-10-03T08:30:00"
+        }
+      ]
+    },
+    {
+      "id": "R6",
+      "text": "The customer shall be permitted to complete checkout as an anonymous guest without creating an account or logging in.",
+      "type": "Functional",
+      "priority": "Medium",
+      "impact": 3,
+      "complexity": 3,
+      "version": 1,
+      "change_count": 0,
+      "status": "Draft",
+      "history": [
+        {
+          "version": 1,
+          "text": "The customer shall be permitted to complete checkout as an anonymous guest without creating an account or logging in.",
+          "timestamp": "2026-10-04T12:00:00"
+        }
+      ]
+    },
+    {
+      "id": "R7",
+      "text": "The system shall require mandatory user authentication and verified mobile phone registration prior to placing any delivery order.",
+      "type": "Functional",
+      "priority": "High",
+      "impact": 4,
+      "complexity": 3,
+      "version": 1,
+      "change_count": 0,
+      "status": "Approved",
+      "history": [
+        {
+          "version": 1,
+          "text": "The system shall require mandatory user authentication and verified mobile phone registration prior to placing any delivery order.",
+          "timestamp": "2026-10-04T13:45:00"
+        }
+      ]
+    },
+    {
+      "id": "R8",
+      "text": "The driver shall accept delivery tasks and the system shall notify the restaurant and the customer shall receive an SMS alert and the database shall record the timestamp.",
+      "type": "Functional",
+      "priority": "Medium",
+      "impact": 4,
+      "complexity": 4,
+      "version": 1,
+      "change_count": 0,
+      "status": "Approved",
+      "history": [
+        {
+          "version": 1,
+          "text": "The driver shall accept delivery tasks and the system shall notify the restaurant and the customer shall receive an SMS alert and the database shall record the timestamp.",
+          "timestamp": "2026-10-05T09:20:00"
+        }
+      ]
+    },
+    {
+      "id": "R9",
+      "text": "The system shall dispatch scheduled promotional push notifications to active users based on order history every Friday at 17:00.",
+      "type": "Functional",
+      "priority": "Low",
+      "impact": 2,
+      "complexity": 2,
+      "version": 1,
+      "change_count": 0,
+      "status": "Approved",
+      "history": [
+        {
+          "version": 1,
+          "text": "The system shall dispatch scheduled promotional push notifications to active users based on order history every Friday at 17:00.",
+          "timestamp": "2026-10-06T15:10:00"
+        }
+      ]
+    },
+    {
+      "id": "R10",
+      "text": "The backend order API shall sustain an average response latency of less than 200 ms under a peak load of 5000 requests per second.",
+      "type": "Non-Functional",
+      "priority": "High",
+      "impact": 5,
+      "complexity": 5,
+      "version": 1,
+      "change_count": 0,
+      "status": "Approved",
+      "history": [
+        {
+          "version": 1,
+          "text": "The backend order API shall sustain an average response latency of less than 200 ms under a peak load of 5000 requests per second.",
+          "timestamp": "2026-10-07T10:00:00"
+        }
+      ]
+    },
+    {
+      "id": "R11",
+      "text": "The architecture should be flexible and robust for future payment gateway plugins.",
+      "type": "Non-Functional",
+      "priority": "Medium",
+      "impact": 3,
+      "complexity": 3,
+      "version": 1,
+      "change_count": 0,
+      "status": "Draft",
+      "history": [
+        {
+          "version": 1,
+          "text": "The architecture should be flexible and robust for future payment gateway plugins.",
+          "timestamp": "2026-10-07T14:00:00"
+        }
+      ]
+    },
+    {
+      "id": "R12",
+      "text": "All stored user payment data and authentication credentials shall be encrypted at rest with AES-256 and in transit with TLS 1.3.",
+      "type": "Non-Functional",
+      "priority": "High",
+      "impact": 5,
+      "complexity": 4,
+      "version": 1,
+      "change_count": 0,
+      "status": "Approved",
+      "history": [
+        {
+          "version": 1,
+          "text": "All stored user payment data and authentication credentials shall be encrypted at rest with AES-256 and in transit with TLS 1.3.",
+          "timestamp": "2026-10-08T16:30:00"
+        }
+      ]
+    }
+  ],
+  "design_elements": [
+    {
+      "id": "D1",
+      "name": "OrderManagementService",
+      "kind": "Module",
+      "linked_reqs": ["R1", "R6", "R7", "R8"]
+    },
+    {
+      "id": "D2",
+      "name": "PaymentGatewayAdapter",
+      "kind": "Class",
+      "linked_reqs": ["R2", "R11", "R12"]
+    },
+    {
+      "id": "D3",
+      "name": "DriverLocationTracker",
+      "kind": "Module",
+      "linked_reqs": ["R5", "R8"]
+    },
+    {
+      "id": "D4",
+      "name": "MenuCatalogAPI",
+      "kind": "API",
+      "linked_reqs": ["R1", "R10"]
+    },
+    {
+      "id": "D5",
+      "name": "NotificationDispatcher",
+      "kind": "Module",
+      "linked_reqs": ["R8", "R9"]
+    },
+    {
+      "id": "D6",
+      "name": "CustomerMobileUI",
+      "kind": "Module",
+      "linked_reqs": ["R1", "R3", "R4", "R5"]
+    },
+    {
+      "id": "D7",
+      "name": "AuthSecurityManager",
+      "kind": "Class",
+      "linked_reqs": ["R6", "R7", "R12"]
+    },
+    {
+      "id": "D8",
+      "name": "OrdersTransactionsTable",
+      "kind": "DB Table",
+      "linked_reqs": ["R2", "R12"]
+    }
+  ],
+  "test_cases": [
+    {
+      "id": "T1",
+      "title": "Verify dietary preference filter for vegan and gluten-free items",
+      "steps": [
+        "1. Query menu catalog for Italian cuisine category",
+        "2. Apply filter token: 'vegan'",
+        "3. Inspect returned dish metadata collection"
+      ],
+      "expected": "Only dishes containing 'vegan' allergen certificate are returned.",
+      "type": "Unit",
+      "linked_req": "R1",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T2",
+      "title": "E2E Menu Search and Dietary Filter Application",
+      "steps": [
+        "1. Launch mobile food catalog viewport",
+        "2. Toggle 'Halal' dietary tag filter",
+        "3. Select top restaurant dish and click 'Add to Cart'"
+      ],
+      "expected": "Halal badge verified on card and item increments cart counter.",
+      "type": "System",
+      "linked_req": "R1",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T3",
+      "title": "Stripe Tokenization and Card Charge Validation",
+      "steps": [
+        "1. Construct customer payment intent payload with Stripe test card",
+        "2. Call PaymentGatewayAdapter.charge()",
+        "3. Verify payment intent status code"
+      ],
+      "expected": "Returns transaction status 'succeeded' with non-empty charge ID.",
+      "type": "Unit",
+      "linked_req": "R2",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T4",
+      "title": "Payment Gateway Latency Benchmark (<3s)",
+      "steps": [
+        "1. Initiate simulated card authorization of $42.50",
+        "2. Record wall-clock execution timer across network roundtrip",
+        "3. Verify receipt generation event"
+      ],
+      "expected": "Complete round-trip transaction completes in less than 3.0 seconds.",
+      "type": "Integration",
+      "linked_req": "R2",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T5",
+      "title": "Payment Gateway Card Decline Handling Boundary",
+      "steps": [
+        "1. Submit expired credit card payload to payment checkout",
+        "2. Trigger payment settlement flow",
+        "3. Inspect error response and UI messaging"
+      ],
+      "expected": "System returns graceful CardDeclinedException and prompts user for alternative card without 500 error.",
+      "type": "System",
+      "linked_req": "R2",
+      "status": "Fail",
+      "auto_generated": false
+    },
+    {
+      "id": "T6",
+      "title": "Courier GPS Coordinate Ingestion Stream",
+      "steps": [
+        "1. Emit courier telemetry payload (lat: 40.7128, lng: -74.0060, speed: 25 km/h)",
+        "2. Subscribe client listener to driver channel topic",
+        "3. Validate parsed GeoJSON coordinates"
+      ],
+      "expected": "GeoJSON coordinate event broadcast to client subscriber within 500 ms.",
+      "type": "Integration",
+      "linked_req": "R5",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T7",
+      "title": "Customer Interactive Map UI Live Update",
+      "steps": [
+        "1. Open live order tracking map view",
+        "2. Dispatch 3 sequential courier telemetry pings at 5-second intervals",
+        "3. Monitor marker position interpolator"
+      ],
+      "expected": "Courier map marker updates coordinates smoothly every 5 seconds.",
+      "type": "Acceptance",
+      "linked_req": "R5",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T8",
+      "title": "Mobile Phone Number E.164 Format Validator",
+      "steps": [
+        "1. Pass valid number '+14155552671' to phone validator",
+        "2. Pass invalid number '12345' missing country prefix",
+        "3. Assert regex validation outcomes"
+      ],
+      "expected": "Valid E.164 passes validation; malformed number throws ValidationError.",
+      "type": "Unit",
+      "linked_req": "R7",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T9",
+      "title": "SMS One-Time Password Generation and Expiry Flow",
+      "steps": [
+        "1. Dispatch OTP verification code for mobile registration",
+        "2. Submit correct 6-digit pin within validity window",
+        "3. Re-submit same token after 300-second expiration"
+      ],
+      "expected": "Initial submission verifies account; expired submission returns OTP_EXPIRED.",
+      "type": "Integration",
+      "linked_req": "R7",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T10",
+      "title": "Enforce Mandatory Phone Verification on Order Submission",
+      "steps": [
+        "1. Create unverified user session",
+        "2. Populate cart with items and attempt checkout execution",
+        "3. Verify HTTP response code"
+      ],
+      "expected": "System rejects order with HTTP 403 Forbidden: Verification Required.",
+      "type": "Acceptance",
+      "linked_req": "R7",
+      "status": "Not Run",
+      "auto_generated": false
+    },
+    {
+      "id": "T11",
+      "title": "Menu Catalog API Single Query Latency (<200ms)",
+      "steps": [
+        "1. Execute GET request to /api/v1/catalog/menu/restaurant-99",
+        "2. Measure server response time across 100 consecutive calls",
+        "3. Compute 95th percentile latency"
+      ],
+      "expected": "P95 latency remains strictly below 200 milliseconds.",
+      "type": "Unit",
+      "linked_req": "R10",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T12",
+      "title": "Order Ingestion Stress Load at 5000 RPS",
+      "steps": [
+        "1. Configure load generator to sustain 5000 concurrent RPS for 5 minutes",
+        "2. Direct traffic against order creation endpoint",
+        "3. Monitor server error logs and response times"
+      ],
+      "expected": "Average latency remains under 200 ms with error rate less than 0.1%.",
+      "type": "System",
+      "linked_req": "R10",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T13",
+      "title": "Database AES-256 Storage Encryption Audit",
+      "steps": [
+        "1. Insert record containing sensitive customer payment details",
+        "2. Read raw binary block storage from PostgreSQL tablespace",
+        "3. Attempt plaintext ASCII string search for cardholder data"
+      ],
+      "expected": "No plaintext credentials found; block data is encrypted using AES-256-GCM.",
+      "type": "Unit",
+      "linked_req": "R12",
+      "status": "Pass",
+      "auto_generated": false
+    },
+    {
+      "id": "T14",
+      "title": "TLS 1.3 Modern Cipher Handshake Enforcement",
+      "steps": [
+        "1. Initiate SSL handshake requesting deprecated TLS 1.0/1.1 protocols",
+        "2. Initiate SSL handshake requesting TLS 1.3 with AES-256-GCM-SHA384",
+        "3. Record connection handshake responses"
+      ],
+      "expected": "Legacy handshake actively aborted; TLS 1.3 handshake negotiates successfully.",
+      "type": "System",
+      "linked_req": "R12",
+      "status": "Pass",
+      "auto_generated": false
+    }
+  ]
+}
