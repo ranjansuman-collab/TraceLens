@@ -6,7 +6,6 @@ estimates engineering rework effort, and commits changes with automated regressi
 
 from __future__ import annotations
 import streamlit as st
-import streamlit.components.v1 as components
 import pandas as pd
 
 from core.models import Project
@@ -85,11 +84,11 @@ def render_impact_page(project: Project) -> None:
         nx_graph = build_traceability_graph(project)
         pyvis_html = generate_pyvis_html(
             nx_graph,
-            height="520px",
+            height="540px",
             highlight_nodes=impact.node_color_map,
             dark_mode=True,
         )
-        components.html(pyvis_html, height=540, scrolling=False)
+        st.html(pyvis_html, width="stretch", unsafe_allow_javascript=True)
 
         st.markdown("---")
 
@@ -122,7 +121,7 @@ def render_impact_page(project: Project) -> None:
                     "Total Hours": f"{b.total_hours} hrs",
                 })
             df_breakdown = pd.DataFrame(breakdown_rows)
-            st.dataframe(df_breakdown, use_container_width=True, hide_index=True)
+            st.dataframe(df_breakdown, width="stretch", hide_index=True)
 
         st.markdown("---")
 

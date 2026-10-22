@@ -122,7 +122,7 @@ def render_dashboard(project: Project) -> None:
             height=300,
             margin=dict(l=25, r=25, t=40, b=25),
         )
-        st.plotly_chart(fig_gauge, use_container_width=True)
+        st.plotly_chart(fig_gauge, width="stretch")
 
         if health.composite_score >= 80:
             st.success(f"**Verdict:** {health.verdict}")
@@ -167,7 +167,7 @@ def render_dashboard(project: Project) -> None:
             height=300,
             margin=dict(l=25, r=25, t=20, b=25),
         )
-        st.plotly_chart(fig_bars, use_container_width=True)
+        st.plotly_chart(fig_bars, width="stretch")
 
     st.markdown("---")
 
@@ -200,7 +200,7 @@ def render_dashboard(project: Project) -> None:
             margin=dict(l=20, r=20, t=35, b=20),
             legend=dict(orientation="h", y=1.15),
         )
-        st.plotly_chart(fig_trend, use_container_width=True)
+        st.plotly_chart(fig_trend, width="stretch")
     else:
         st.info("ℹ️ Snapshot logged. Make further requirement updates or run test executions to populate the multi-point quality trend line.")
 
@@ -221,7 +221,7 @@ def render_dashboard(project: Project) -> None:
             "Engineering Recommendation": f.recommendation,
         })
     df_iso = pd.DataFrame(iso_rows)
-    st.dataframe(df_iso, use_container_width=True, hide_index=True)
+    st.dataframe(df_iso, width="stretch", hide_index=True)
 
     st.markdown("---")
 
@@ -248,7 +248,7 @@ def render_dashboard(project: Project) -> None:
             margin=dict(l=10, r=10, t=10, b=10),
             legend=dict(orientation="h", y=-0.1),
         )
-        st.plotly_chart(fig_donut, use_container_width=True)
+        st.plotly_chart(fig_donut, width="stretch")
 
     with col_t2:
         st.markdown("#### Active Defects & Regression Watchlist")

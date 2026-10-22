@@ -37,7 +37,7 @@ def render_traceability_page(project: Project) -> None:
             file_name="traceability_matrix.csv",
             mime="text/csv",
             type="primary",
-            use_container_width=True,
+            width="stretch",
         )
 
     # Filtered Requirements
@@ -76,7 +76,7 @@ def render_traceability_page(project: Project) -> None:
 
         df_grid = pd.DataFrame(grid_rows)
         if not df_grid.empty:
-            st.dataframe(df_grid, use_container_width=True, hide_index=True)
+            st.dataframe(df_grid, width="stretch", hide_index=True)
             st.caption("✔ indicates requirement is directly verified by the test case column.")
         else:
             st.info("No requirements match current filter.")
@@ -100,7 +100,7 @@ def render_traceability_page(project: Project) -> None:
 
         df_des_grid = pd.DataFrame(design_rows)
         if not df_des_grid.empty:
-            st.dataframe(df_des_grid, use_container_width=True, hide_index=True)
+            st.dataframe(df_des_grid, width="stretch", hide_index=True)
             st.caption("✔ indicates requirement is realized by the architectural design element column.")
         else:
             st.info("No requirements match current filter.")
@@ -128,6 +128,6 @@ def render_traceability_page(project: Project) -> None:
 
         df_ledger = pd.DataFrame(ledger_rows)
         if not df_ledger.empty:
-            st.dataframe(df_ledger, use_container_width=True, hide_index=True)
+            st.dataframe(df_ledger, width="stretch", hide_index=True)
         else:
             st.info("No requirements match current filter.")

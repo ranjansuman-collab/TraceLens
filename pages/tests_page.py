@@ -159,24 +159,24 @@ def render_tests_page(project: Project) -> None:
                     st.markdown("**Update Status:**")
                     b1, b2 = st.columns(2)
                     with b1:
-                        if st.button("✅ Pass", key=f"pass_{tc.id}", use_container_width=True):
+                        if st.button("✅ Pass", key=f"pass_{tc.id}", width="stretch"):
                             tc.status = "Pass"
                             if tc.defect_severity == "Critical":
                                 tc.defect_severity = "None"
                             save_project(project)
                             st.rerun()
-                        if st.button("❌ Fail", key=f"fail_{tc.id}", use_container_width=True):
+                        if st.button("❌ Fail", key=f"fail_{tc.id}", width="stretch"):
                             tc.status = "Fail"
                             if tc.defect_severity == "None":
                                 tc.defect_severity = "High"
                             save_project(project)
                             st.rerun()
                     with b2:
-                        if st.button("🔄 Review", key=f"rev_{tc.id}", use_container_width=True):
+                        if st.button("🔄 Review", key=f"rev_{tc.id}", width="stretch"):
                             tc.status = "Needs Review"
                             save_project(project)
                             st.rerun()
-                        if st.button("⏸️ Reset", key=f"rst_{tc.id}", use_container_width=True):
+                        if st.button("⏸️ Reset", key=f"rst_{tc.id}", width="stretch"):
                             tc.status = "Not Run"
                             save_project(project)
                             st.rerun()

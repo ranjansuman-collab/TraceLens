@@ -60,7 +60,7 @@ def render_risk_page(project: Project) -> None:
                 })
 
             df_tests = pd.DataFrame(table_rows)
-            st.dataframe(df_tests, use_container_width=True, hide_index=True)
+            st.dataframe(df_tests, width="stretch", hide_index=True)
         else:
             st.info("No test cases defined in project.")
 
@@ -71,7 +71,7 @@ def render_risk_page(project: Project) -> None:
 
         rmmm_ctrl_col1, rmmm_ctrl_col2 = st.columns([3, 1])
         with rmmm_ctrl_col2:
-            if st.button("🤖 AI Synthesize Strategies", use_container_width=True):
+            if st.button("🤖 AI Synthesize Strategies", width="stretch"):
                 sorted_reqs = sorted(project.requirements, key=calculate_requirement_risk, reverse=True)[:5]
                 custom_db = {}
                 with st.spinner("Synthesizing context-aware RMMM strategies..."):
@@ -136,4 +136,4 @@ def render_risk_page(project: Project) -> None:
             height=420,
             margin=dict(l=25, r=25, t=20, b=25),
         )
-        st.plotly_chart(fig_risk, use_container_width=True)
+        st.plotly_chart(fig_risk, width="stretch")

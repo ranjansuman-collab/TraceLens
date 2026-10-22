@@ -5,7 +5,6 @@ Visualizes requirement-to-requirement coupling via shared architecture, detected
 
 from __future__ import annotations
 import streamlit as st
-import streamlit.components.v1 as components
 import networkx as nx
 import pandas as pd
 
@@ -85,8 +84,8 @@ def render_req_dependency_page(project: Project) -> None:
     )
 
     # Render Graph
-    html = generate_pyvis_html(active_graph, height="560px", width="100%", dark_mode=True)
-    components.html(html, height=580, scrolling=False)
+    html = generate_pyvis_html(active_graph, height="580px", width="100%", dark_mode=True)
+    st.html(html, width="stretch", unsafe_allow_javascript=True)
 
     # Coupling Table
     st.write("")
@@ -111,4 +110,4 @@ def render_req_dependency_page(project: Project) -> None:
         })
 
     df = pd.DataFrame(table_data).sort_values("Total Coupling Degree", ascending=False)
-    st.dataframe(df, use_container_width=True, hide_index=True)
+    st.dataframe(df, width="stretch", hide_index=True)

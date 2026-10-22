@@ -11,6 +11,10 @@ __pycache__/
 .coverage.*
 htmlcov/
 
+# Runtime state (mutated on every run)
+data/quality_history.json
+data/project.json
+
 # Temporary and local config
 *.tmp
 .env

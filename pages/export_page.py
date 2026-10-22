@@ -35,7 +35,7 @@ def render_export_page(project: Project) -> None:
         file_name="tracelens_export_pack.zip",
         mime="application/zip",
         type="primary",
-        use_container_width=True,
+        width="stretch",
     )
 
     st.markdown("---")
@@ -81,7 +81,7 @@ def render_export_page(project: Project) -> None:
         )
         try:
             df_csv = pd.read_csv(io.StringIO(csv_content))
-            st.dataframe(df_csv, use_container_width=True, hide_index=True)
+            st.dataframe(df_csv, width="stretch", hide_index=True)
         except Exception:
             st.code(csv_content, language="csv")
 

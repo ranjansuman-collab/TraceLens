@@ -78,7 +78,7 @@ def render_design_page(project: Project) -> None:
                     "Req Count": len(d.linked_reqs),
                 })
             df = pd.DataFrame(table_data)
-            st.dataframe(df, use_container_width=True, hide_index=True)
+            st.dataframe(df, width="stretch", hide_index=True)
 
     # Tab 2: Add Design Element
     with tab_add:
@@ -190,7 +190,7 @@ def render_design_page(project: Project) -> None:
                 hole=0.45,
             )
             fig_kind.update_layout(template="plotly_dark", margin=dict(t=40, b=20, l=20, r=20))
-            st.plotly_chart(fig_kind, use_container_width=True)
+            st.plotly_chart(fig_kind, width="stretch")
 
         with chart_col2:
             link_counts = pd.DataFrame([
@@ -209,4 +209,4 @@ def render_design_page(project: Project) -> None:
                 color_continuous_scale="Purples",
             )
             fig_links.update_layout(template="plotly_dark", margin=dict(t=40, b=20, l=20, r=20))
-            st.plotly_chart(fig_links, use_container_width=True)
+            st.plotly_chart(fig_links, width="stretch")

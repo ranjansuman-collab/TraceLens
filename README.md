@@ -2,8 +2,8 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Streamlit](https://img.shields.io/badge/frontend-Streamlit-FF4B4B.svg)](https://streamlit.io/)
-[![Pytest Tests](https://img.shields.io/badge/tests-35%20passed-brightgreen.svg)](https://docs.pytest.org/)
-[![Test Coverage](https://img.shields.io/badge/coverage-85%25-green.svg)](https://coverage.readthedocs.io/)
+[![Pytest Tests](https://img.shields.io/badge/tests-44%20passed-brightgreen.svg)](https://docs.pytest.org/)
+[![Test Coverage](https://img.shields.io/badge/coverage-core%2081%25%20%7C%20total%2038%25-yellow.svg)](https://coverage.readthedocs.io/)
 [![Zero-Crash Guarantee](https://img.shields.io/badge/mode-Offline%20Mock%20Resilient-emerald.svg)]()
 
 > A living, graph-reactive software engineering traceability platform built for university Software Engineering coursework.
@@ -75,7 +75,7 @@ Run tests with test coverage analysis:
 ```bash
 pytest --cov=core tests/
 ```
-*Current test metrics: **35 passed tests**, **0 warnings**, **85% core coverage**.*
+*Current test metrics: **44 passed tests**, **0 warnings**, **core coverage ~81%**, **total coverage ~38%**.*
 
 ---
 

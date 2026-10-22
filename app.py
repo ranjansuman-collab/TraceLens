@@ -210,13 +210,13 @@ def main() -> None:
         # Quick Actions Popover
         with st.popover("⚡ Quick Actions & New Project"):
             st.markdown("#### Quick Shortcuts")
-            if st.button("➕ Jump to Requirements", use_container_width=True):
+            if st.button("➕ Jump to Requirements", width="stretch"):
                 st.session_state["nav_page"] = "📋 Requirements Manager"
                 st.rerun()
-            if st.button("🔍 Run Quality Linter", use_container_width=True):
+            if st.button("🔍 Run Quality Linter", width="stretch"):
                 st.session_state["nav_page"] = "🔍 Quality Linter & AI Refactoring"
                 st.rerun()
-            if st.button("💥 Simulate Change Blast Radius", use_container_width=True):
+            if st.button("💥 Simulate Change Blast Radius", width="stretch"):
                 st.session_state["nav_page"] = "💥 Change Impact Simulator"
                 st.rerun()
             
@@ -224,7 +224,7 @@ def main() -> None:
             st.markdown("#### Create New Project File")
             new_p_name = st.text_input("Project Name", placeholder="e.g. Telemedicine App")
             new_p_file = st.text_input("File Name", placeholder="e.g. telemedicine.json")
-            if st.button("Create Project", type="primary", use_container_width=True):
+            if st.button("Create Project", type="primary", width="stretch"):
                 if new_p_name and new_p_file:
                     safe_file = new_p_file if new_p_file.endswith(".json") else f"{new_p_file}.json"
                     created_proj = create_new_project(new_p_name, safe_file)
@@ -279,7 +279,7 @@ def main() -> None:
 
         st.markdown("---")
         st.markdown("#### Demo Controls")
-        if st.button("🔄 Reset Demo Data", type="secondary", use_container_width=True):
+        if st.button("🔄 Reset Demo Data", type="secondary", width="stretch"):
             fresh_project = reset_to_sample_data(DATA_DIR / st.session_state.active_project_file)
             st.session_state.project = fresh_project
             if "current_impact" in st.session_state:

@@ -105,7 +105,7 @@ def render_heatmap_page(project: Project) -> None:
         margin=dict(l=80, r=40, t=60, b=40),
     )
 
-    st.plotly_chart(fig_heat, use_container_width=True)
+    st.plotly_chart(fig_heat, width="stretch")
 
     st.markdown("---")
 
@@ -130,7 +130,7 @@ def render_heatmap_page(project: Project) -> None:
             }
             for u in uncovered_list
         ])
-        st.dataframe(df_uncovered, use_container_width=True, hide_index=True)
+        st.dataframe(df_uncovered, width="stretch", hide_index=True)
 
         st.markdown("#### ⚡ Quick Remediation")
         col_act1, col_act2 = st.columns([2, 1])

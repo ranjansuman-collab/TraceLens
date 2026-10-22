@@ -5,7 +5,6 @@ Renders an interactive multi-tiered network visualization of Requirements, Desig
 
 from __future__ import annotations
 import streamlit as st
-import streamlit.components.v1 as components
 import networkx as nx
 
 from core.models import Project
@@ -98,12 +97,12 @@ def render_graph_page(project: Project) -> None:
         # Generate PyVis HTML
         html_content = generate_pyvis_html(
             subgraph,
-            height="580px",
+            height="600px",
             width="100%",
             highlight_nodes=highlight_nodes if highlight_nodes else None,
             dark_mode=True,
         )
-        components.html(html_content, height=600, scrolling=False)
+        st.html(html_content, width="stretch", unsafe_allow_javascript=True)
 
     # Detailed Node Inspector
     with st.expander("🔍 Node Property Inspector", expanded=False):

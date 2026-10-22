@@ -80,7 +80,7 @@ def render_requirements_page(project: Project) -> None:
 
         df = pd.DataFrame(rows)
         if not df.empty:
-            st.dataframe(df, use_container_width=True, hide_index=True)
+            st.dataframe(df, width="stretch", hide_index=True)
             st.caption(f"Displaying {len(df)} of {len(project.requirements)} requirements.")
         else:
             st.info("No requirements match the selected filter criteria.")
@@ -130,7 +130,7 @@ def render_requirements_page(project: Project) -> None:
             )
         with ai_col2:
             seed_type = st.selectbox("Spec Type", ["Functional", "Non-Functional"], key="seed_type_select")
-            if st.button("✨ Suggest Statement", use_container_width=True):
+            if st.button("✨ Suggest Statement", width="stretch"):
                 if seed_topic.strip():
                     suggested, is_mock = suggest_requirement_ai(seed_topic, seed_type)
                     st.session_state["suggested_req_text"] = suggested
@@ -289,7 +289,7 @@ def render_requirements_page(project: Project) -> None:
                     "Is Current": "✅ Current" if h.version == hist_req.version else "Historical",
                 })
             df_hist = pd.DataFrame(history_rows)
-            st.dataframe(df_hist, use_container_width=True, hide_index=True)
+            st.dataframe(df_hist, width="stretch", hide_index=True)
 
             if len(hist_req.history) > 1:
                 st.markdown("#### ⏪ Rollback / Restore Revision")
@@ -345,7 +345,7 @@ def render_requirements_page(project: Project) -> None:
                 height=400,
                 margin=dict(l=20, r=20, t=40, b=20),
             )
-            st.plotly_chart(fig_vol, use_container_width=True)
+            st.plotly_chart(fig_vol, width="stretch")
 
             # Volatility Leaderboard
             st.markdown("##### 🔥 Most Volatile Requirements (Churn Hotspots)")
@@ -361,6 +361,6 @@ def render_requirements_page(project: Project) -> None:
                 }
                 for r in churners[:5]
             ]
-            st.dataframe(pd.DataFrame(top_churners), use_container_width=True, hide_index=True)
+            st.dataframe(pd.DataFrame(top_churners), width="stretch", hide_index=True)
         else:
             st.info("No revision history recorded yet.")
